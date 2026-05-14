@@ -38,51 +38,52 @@
 
     .page {
       position: relative; z-index: 1;
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 48px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    .hero { padding: 120px 0 0; }
+    .hero { padding: 140px 0 0; }
 
     h1 {
       font-family: var(--font-display);
-      font-size: clamp(28px, 4.5vw, 42px);
+      font-size: clamp(30px, 4vw, 52px);
       font-weight: normal;
       font-style: italic;
       line-height: 1.2;
       margin-bottom: 16px;
+      max-width: 800px;
       opacity: 0; transform: translateY(12px);
       animation: up .6s ease .2s forwards;
     }
 
     .tagline {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--muted);
-      margin-bottom: 48px;
+      margin-bottom: 56px;
       opacity: 0; transform: translateY(12px);
       animation: up .6s ease .3s forwards;
     }
 
     .about {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.8;
       color: #5a5248;
-      margin-bottom: 56px;
-      max-width: 520px;
+      margin-bottom: 64px;
+      max-width: 600px;
       opacity: 0; transform: translateY(12px);
       animation: up .6s ease .4s forwards;
     }
 
     .line {
-      width: 40px;
+      width: 48px;
       height: 1px;
       background: rgba(0,0,0,0.12);
-      margin-bottom: 40px;
+      margin-bottom: 48px;
       opacity: 0;
       animation: fadeIn .6s ease .5s forwards;
     }
@@ -99,10 +100,10 @@
     }
 
     .projects {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1px;
-      margin-bottom: 56px;
+      margin-bottom: 64px;
       background: var(--border);
       border: 1px solid var(--border);
       opacity: 0; transform: translateY(12px);
@@ -111,7 +112,7 @@
 
     .project {
       background: var(--card-bg);
-      padding: 22px 24px;
+      padding: 28px 28px;
       transition: background .25s;
       cursor: default;
     }
@@ -120,22 +121,22 @@
 
     .project-name {
       font-family: var(--font-display);
-      font-size: 16px;
+      font-size: 17px;
       font-weight: normal;
       font-style: italic;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .project-desc {
-      font-size: 12.5px;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.65;
       color: var(--muted);
     }
 
     .clock-float {
       position: fixed;
       top: 20px;
-      right: 28px;
+      right: 32px;
       z-index: 10;
       opacity: 0;
       animation: fadeIn .8s ease .6s forwards;
@@ -150,23 +151,24 @@
     }
 
     .exploring {
-      margin-bottom: 56px;
+      margin-bottom: 64px;
       opacity: 0; transform: translateY(12px);
       animation: up .6s ease .65s forwards;
     }
 
     .exploring-text {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--muted);
       line-height: 1.7;
+      letter-spacing: 0.5px;
     }
 
     .exploring-text span { color: #5a5248; }
 
     .links {
       display: flex;
-      gap: 24px;
-      margin-bottom: 120px;
+      gap: 28px;
+      margin-bottom: 140px;
       opacity: 0; transform: translateY(12px);
       animation: up .6s ease .7s forwards;
     }
@@ -195,9 +197,10 @@
     @keyframes up { to { opacity:1; transform:translateY(0); } }
     @keyframes fadeIn { to { opacity:1; } }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .page { padding: 0 20px; }
       .hero { padding-top: 80px; }
+      .projects { grid-template-columns: 1fr; }
       .clock-float { display: none; }
     }
   </style>
