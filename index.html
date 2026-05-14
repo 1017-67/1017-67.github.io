@@ -187,12 +187,6 @@
       border-bottom-color: var(--accent);
     }
 
-    .footer {
-      padding: 32px 0 52px;
-      border-top: 1px solid var(--border);
-      margin-top: auto;
-    }
-
     @keyframes up { to { opacity:1; transform:translateY(0); } }
     @keyframes fadeIn { to { opacity:1; } }
 
@@ -208,6 +202,10 @@
 <canvas id="bg"></canvas>
 
 <div class="page">
+  <div class="clock-float">
+    <div class="clock-time" id="clock"></div>
+  </div>
+
   <div class="hero">
     <h1>Machine learning, software, and science.<br>Some things I am interested in.</h1>
     <p class="tagline">Selected projects and experiments.</p>
@@ -241,9 +239,7 @@
     </div>
   </div>
 
-  <div class="clock-float">
-    <div class="clock-time" id="clock"></div>
-  </div>
+  <div class="line"></div>
 
   <div class="exploring">
     <div class="section-label">Currently Exploring</div>
@@ -252,12 +248,13 @@
     </p>
   </div>
 
+  <div class="line"></div>
+
   <div class="links">
     <a href="https://github.com/1017-67" target="_blank">GitHub ↗</a>
     <a href="mailto:liuhc1017@gmail.com">Email</a>
   </div>
 
-  <div class="footer"></div>
 </div>
 
 <script>
